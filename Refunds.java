@@ -29,20 +29,20 @@ import javax.swing.JTextField;
  *
  * @author Michael
  */
-public class Sales extends JFrame implements Observer {
+public class Refunds extends JFrame implements Observer {
 
     private Button clear = new Button("Clear");
-    private Button addcart = new Button("Add to refund");
+    private Button addcart = new Button("Add to cart");
     private Button back = new Button("Back");
-    private Button checkout = new Button("Confirm refund");
+    private Button checkout = new Button("Check out");
 
     private TextField text = new TextField("type stuff here");
 
     private Label itemLB = new Label("Enter item number here: ", Label.RIGHT);
 
-    public Sales() {
+    public Refunds() {
 
-        super("Sales:");
+        super("Refunds:");
         setSize(600, 600);
         setVisible(true);
         setLayout(new BorderLayout(5, 5));

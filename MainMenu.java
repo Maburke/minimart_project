@@ -74,12 +74,28 @@ public class MainMenu extends Frame implements Observer {
             }
         }
         );
-        
+
         //opens sales window when button is pressed
         salesB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //open the sales window
                 new Sales().setVisible(true);
+
+                //hide the main menu window
+                setVisible(false);
+            }
+        });
+
+        //opens refunds window when button is pressed
+        refundB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //open the refunds window
+                new Refunds().setVisible(true);
+
+                //hide the main menu window
+                setVisible(false);
             }
         });
 
