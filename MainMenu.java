@@ -27,7 +27,7 @@ import java.util.Observer;
  *
  * @author Michael
  */
-public abstract class MainMenu extends Frame implements Observer {
+public class MainMenu extends Frame implements Observer {
 
     private Button salesB = new Button("Sales");
     private Button refundB = new Button("Refunds");
@@ -44,29 +44,28 @@ public abstract class MainMenu extends Frame implements Observer {
 //        add(mid, BorderLayout.CENTER);
 //        mid.setLayout(new GridLayout(5, 3, 10, 10));
 //        mid.setBackground(Color.black);
+        Panel thegrid = new Panel();
+        add(thegrid, BorderLayout.CENTER);
+        thegrid.setLayout(new GridLayout(3, 5));
+        thegrid.setBackground(Color.black);
 
-          Panel thegrid = new Panel();
-          add(thegrid, BorderLayout.CENTER);
-          thegrid.setLayout(new GridLayout(3,5));
-          thegrid.setBackground(Color.black);
-          
-          thegrid.add(new Label(""));
-          thegrid.add(this.salesB);
-          thegrid.add(new Label(""));
-          thegrid.add(this.refundB);
-          thegrid.add(new Label(""));
-          
-          thegrid.add(new Label(""));
-          thegrid.add(new Label(""));
-          thegrid.add(new Label(""));
-          thegrid.add(new Label(""));
-          thegrid.add(new Label(""));
-          
-          thegrid.add(new Label(""));
-          thegrid.add(this.ordersupB);
-          thegrid.add(new Label(""));
-          thegrid.add(this.invB);
-          thegrid.add(new Label(""));
+        thegrid.add(new Label(""));
+        thegrid.add(this.salesB);
+        thegrid.add(new Label(""));
+        thegrid.add(this.refundB);
+        thegrid.add(new Label(""));
+
+        thegrid.add(new Label(""));
+        thegrid.add(new Label(""));
+        thegrid.add(new Label(""));
+        thegrid.add(new Label(""));
+        thegrid.add(new Label(""));
+
+        thegrid.add(new Label(""));
+        thegrid.add(this.ordersupB);
+        thegrid.add(new Label(""));
+        thegrid.add(this.invB);
+        thegrid.add(new Label(""));
 
         //allows you to press x to close the window 
         addWindowListener(new WindowAdapter() {
@@ -75,6 +74,19 @@ public abstract class MainMenu extends Frame implements Observer {
             }
         }
         );
+        
+        //opens sales window when button is pressed
+        salesB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Sales().setVisible(true);
+            }
+        });
 
+    }
+
+    @Override
+    public void update(Observable o, Object o1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
