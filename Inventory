@@ -17,6 +17,7 @@ import java.util.Observer;
  * @author Michael
  */
 public abstract class Inventory extends Frame implements Observer{
+    //a-y is the item names
     private Label a = new Label("item1");
     private Label b = new Label("item2");
     private Label c = new Label("item3");
@@ -42,7 +43,8 @@ public abstract class Inventory extends Frame implements Observer{
     private Label w = new Label("item23");
     private Label x = new Label("item24");
     private Label y = new Label("item25");
-    
+   
+   //i1-i25 is the quantity number
     private Label i1 = new Label("x");
     private Label i2 = new Label("x");
     private Label i3 = new Label("x");
