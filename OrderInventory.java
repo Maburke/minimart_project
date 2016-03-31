@@ -29,16 +29,16 @@ import javax.swing.JTextField;
  *
  * @author Michael
  */
-public class Refunds extends JFrame implements Observer {
+public class OrderInventory extends JFrame implements Observer {
 
     private Button clear = new Button("Clear");
-    private Button addcart = new Button("Add to refund");
+    private Button addcart = new Button("Add to order");
     private Button back = new Button("Back");
-    private Button checkout = new Button("Confirm refund");
+    private Button checkout = new Button("Confirm order");
 
-    public Refunds() {
+    public OrderInventory() {
 
-        super("Refunds:");
+        super("Order Inventory:");
         setSize(600, 600);
         setVisible(true);
         setLayout(new BorderLayout(5, 5));
@@ -49,9 +49,10 @@ public class Refunds extends JFrame implements Observer {
 
         //bottom.add(new Label(""));
         //bottom.add(new Label(""));
-        bottom.add(this.addcart);
+
+        bottom.add(this.addcart);        
         bottom.add(this.clear);
-        bottom.add(this.checkout);        
+        bottom.add(this.checkout);       
         bottom.add(this.back);
 
         //allows you to press x to close the window 

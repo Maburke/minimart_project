@@ -98,6 +98,30 @@ public class MainMenu extends Frame implements Observer {
                 setVisible(false);
             }
         });
+        
+        //opens order inventory window when button is pressed
+        ordersupB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //open the order window
+                new OrderInventory().setVisible(true);
+                
+                //hide the main menu
+                setVisible(false);
+            }
+        });
+        
+        //opens inventory window when button is pressed
+        invB.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               //open the inv window
+               new Inventory().setVisible(true);
+               
+               //hide main menu
+               setVisible(false);
+           }
+        });
 
     }
 

@@ -32,13 +32,9 @@ import javax.swing.JTextField;
 public class Sales extends JFrame implements Observer {
 
     private Button clear = new Button("Clear");
-    private Button addcart = new Button("Add to refund");
+    private Button addcart = new Button("Add to cart");
     private Button back = new Button("Back");
-    private Button checkout = new Button("Confirm refund");
-
-    private TextField text = new TextField("type stuff here");
-
-    private Label itemLB = new Label("Enter item number here: ", Label.RIGHT);
+    private Button checkout = new Button("Confirm purchase");
 
     public Sales() {
 
@@ -51,15 +47,13 @@ public class Sales extends JFrame implements Observer {
         add(bottom, BorderLayout.SOUTH);
         bottom.setLayout(new GridLayout(4, 2, 5, 5));
 
-        bottom.add(this.itemLB);
-        bottom.add(this.text);
+        //bottom.add(new Label(""));
+        //bottom.add(new Label(""));
 
-        //bottom.add(new Label(""));
-        //bottom.add(new Label(""));
+        bottom.add(this.addcart);        
         bottom.add(this.clear);
-        bottom.add(this.addcart);
+        bottom.add(this.checkout);       
         bottom.add(this.back);
-        bottom.add(this.checkout);
 
         //allows you to press x to close the window 
         addWindowListener(new WindowAdapter() {
