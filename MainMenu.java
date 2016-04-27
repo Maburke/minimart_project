@@ -25,7 +25,7 @@ import java.util.Observer;
 
 /**
  *
- * @author Michael
+ * @author Michael & Jonathan
  */
 public class MainMenu extends Frame implements Observer {
 
@@ -82,8 +82,7 @@ public class MainMenu extends Frame implements Observer {
                 //open the sales window
                 new Sales().setVisible(true);
 
-                //hide the main menu window
-                setVisible(false);
+
             }
         });
 
@@ -94,8 +93,7 @@ public class MainMenu extends Frame implements Observer {
                 //open the refunds window
                 new Refunds().setVisible(true);
 
-                //hide the main menu window
-                setVisible(false);
+
             }
         });
         
@@ -106,8 +104,7 @@ public class MainMenu extends Frame implements Observer {
                 //open the order window
                 new OrderInventory().setVisible(true);
                 
-                //hide the main menu
-                setVisible(false);
+
             }
         });
         
@@ -118,8 +115,7 @@ public class MainMenu extends Frame implements Observer {
                //open the inv window
                new Inventory().setVisible(true);
                
-               //hide main menu
-               setVisible(false);
+
            }
         });
 

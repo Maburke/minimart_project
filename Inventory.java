@@ -23,12 +23,11 @@ import javax.swing.table.*;
 
 /**
  *
- * @author Michael
+ * @author Michael & jonathan
  */
 public class Inventory extends JFrame implements Observer {
 
     private JTable table;
-    private Button back = new Button("Back");
 
     public Inventory() {
 
@@ -65,11 +64,6 @@ public class Inventory extends JFrame implements Observer {
         Container pane = getContentPane();
         pane.setLayout(layout);
 
-        Panel bottom = new Panel();
-        add(bottom, BorderLayout.SOUTH);
-        bottom.setLayout(new GridLayout());
-        bottom.add(this.back);
-
         DefaultTableModel model = new DefaultTableModel(data, titles) {
 
             public Class getColumnClass(int column) {
@@ -89,14 +83,6 @@ public class Inventory extends JFrame implements Observer {
         pack();
         setVisible(true);
         setSize(600, 600);
-
-        
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent we) {
-                System.exit(0);
-            }
-         }
-        );
 
     }
 
