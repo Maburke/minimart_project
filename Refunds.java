@@ -24,6 +24,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
@@ -415,6 +416,7 @@ public class Refunds extends JFrame implements Observer {
         public void actionPerformed(ActionEvent e) {
             list.clear();
             totalSales = 0;
+            Inventory.clickh1 = 0;
             totalSaleL.setText(Integer.toString(totalSales)+ "gp");
         }
         
@@ -424,9 +426,19 @@ public class Refunds extends JFrame implements Observer {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Helm   1   -150 gp");
-            totalSales -= 150;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickh1++;
+            if((Inventory.clickh1 + Inventory.qh1) > 10  ){
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+                
+            }else{
+                list.addElement("Helm   1   -150 gp");
+                totalSales -= 150;
+                totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            }
+            
+            
+            
         }
         
     }
@@ -435,9 +447,16 @@ public class Refunds extends JFrame implements Observer {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Helm   2   -400 gp");
-            totalSales -= 400;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+             Inventory.clickh1++;
+             if((Inventory.clickh2 + Inventory.qh2) > 10  ){
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+                
+            }else{
+                list.addElement("Helm   1   -150 gp");
+                totalSales -= 150;
+                totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            }       
         }
         
     }
