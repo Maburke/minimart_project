@@ -43,8 +43,7 @@ public class Refunds extends JFrame implements Observer {
     private Button addcart = new Button("Add to refund");
     private Button back = new Button("Back");
     private Button checkout = new Button("Confirm refund");
-    */
-    
+     */
     private static final int WIDTH = 750;
     private static final int HEIGHT = 350;
     private static int totalSales = 0;
@@ -59,8 +58,7 @@ public class Refunds extends JFrame implements Observer {
     private JList currentSale;
     private DefaultListModel list;
     private JScrollPane salesScroll;
-    
-    
+
     private RefundButtonHandler rfdHandler;
     private ResetButtonHandler rstHandler;
     private Helm1ButtonHandler h1Handler;
@@ -88,285 +86,285 @@ public class Refunds extends JFrame implements Observer {
     private Sword3ButtonHandler sw3Handler;
     private Sword4ButtonHandler sw4Handler;
     private Sword5ButtonHandler sw5Handler;
-    
+
     public Refunds() {
 
         list = new DefaultListModel();
-        
+
         totalGoldL = new JLabel("Total Gold: ", SwingConstants.LEFT);
         totalSaleL = new JLabel(totalSales + "gp", SwingConstants.RIGHT);
-        
+
         currentSale = new JList(list);
         currentSale.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         currentSale.setSelectedIndex(currentSale.getLastVisibleIndex());
         salesScroll = new JScrollPane(currentSale);
-        
+
         refund = new JButton("Refund");
-        refund.setPreferredSize(new Dimension(200,25));
+        refund.setPreferredSize(new Dimension(200, 25));
         rfdHandler = new RefundButtonHandler();
         refund.addActionListener(rfdHandler);
-        
+
         reset = new JButton("Reset Refund");
-        reset.setPreferredSize(new Dimension(200,25));
+        reset.setPreferredSize(new Dimension(200, 25));
         rstHandler = new ResetButtonHandler();
         reset.addActionListener(rstHandler);
-        
+
         helm1B = new JButton("Helm 1");
-        helm1B.setPreferredSize(new Dimension(100,50));
+        helm1B.setPreferredSize(new Dimension(100, 50));
         h1Handler = new Helm1ButtonHandler();
         helm1B.addActionListener(h1Handler);
-        
+
         helm2B = new JButton("Helm 2");
-        helm2B.setPreferredSize(new Dimension(100,50));
+        helm2B.setPreferredSize(new Dimension(100, 50));
         h2Handler = new Helm2ButtonHandler();
         helm2B.addActionListener(h2Handler);
-        
+
         helm3B = new JButton("Helm 3");
-        helm3B.setPreferredSize(new Dimension(100,50));
+        helm3B.setPreferredSize(new Dimension(100, 50));
         h3Handler = new Helm3ButtonHandler();
         helm3B.addActionListener(h3Handler);
-        
+
         helm4B = new JButton("Helm 4");
-        helm4B.setPreferredSize(new Dimension(100,50));
+        helm4B.setPreferredSize(new Dimension(100, 50));
         h4Handler = new Helm4ButtonHandler();
         helm4B.addActionListener(h4Handler);
-        
+
         helm5B = new JButton("Helm 5");
-        helm5B.setPreferredSize(new Dimension(100,50));
+        helm5B.setPreferredSize(new Dimension(100, 50));
         h5Handler = new Helm5ButtonHandler();
         helm5B.addActionListener(h5Handler);
-        
+
         body1B = new JButton("Body 1");
-        body1B.setPreferredSize(new Dimension(100,50));
+        body1B.setPreferredSize(new Dimension(100, 50));
         b1Handler = new Body1ButtonHandler();
         body1B.addActionListener(b1Handler);
-        
+
         body2B = new JButton("Body 2");
-        body2B.setPreferredSize(new Dimension(100,50));
+        body2B.setPreferredSize(new Dimension(100, 50));
         b2Handler = new Body2ButtonHandler();
         body2B.addActionListener(b2Handler);
-        
+
         body3B = new JButton("Body 3");
-        body3B.setPreferredSize(new Dimension(100,50));
+        body3B.setPreferredSize(new Dimension(100, 50));
         b3Handler = new Body3ButtonHandler();
         body3B.addActionListener(b3Handler);
-        
+
         body4B = new JButton("Body 4");
-        body4B.setPreferredSize(new Dimension(100,50));
+        body4B.setPreferredSize(new Dimension(100, 50));
         b4Handler = new Body4ButtonHandler();
         body4B.addActionListener(b4Handler);
-        
+
         body5B = new JButton("Body 5");
-        body5B.setPreferredSize(new Dimension(100,50));
+        body5B.setPreferredSize(new Dimension(100, 50));
         b5Handler = new Body5ButtonHandler();
         body5B.addActionListener(b5Handler);
-        
+
         legs1B = new JButton("Legs 1");
-        legs1B.setPreferredSize(new Dimension(100,50));
+        legs1B.setPreferredSize(new Dimension(100, 50));
         l1Handler = new Legs1ButtonHandler();
         legs1B.addActionListener(l1Handler);
-        
+
         legs2B = new JButton("Legs 2");
-        legs2B.setPreferredSize(new Dimension(100,50));
+        legs2B.setPreferredSize(new Dimension(100, 50));
         l2Handler = new Legs2ButtonHandler();
         legs2B.addActionListener(l2Handler);
-        
+
         legs3B = new JButton("Legs 3");
-        legs3B.setPreferredSize(new Dimension(100,50));
+        legs3B.setPreferredSize(new Dimension(100, 50));
         l3Handler = new Legs3ButtonHandler();
         legs3B.addActionListener(l3Handler);
-        
+
         legs4B = new JButton("Legs 4");
-        legs4B.setPreferredSize(new Dimension(100,50));
+        legs4B.setPreferredSize(new Dimension(100, 50));
         l4Handler = new Legs4ButtonHandler();
         legs4B.addActionListener(l4Handler);
-        
+
         legs5B = new JButton("Legs 5");
-        legs5B.setPreferredSize(new Dimension(100,50));
+        legs5B.setPreferredSize(new Dimension(100, 50));
         l5Handler = new Legs5ButtonHandler();
         legs5B.addActionListener(l5Handler);
-        
+
         shield1B = new JButton("Shield 1");
-        shield1B.setPreferredSize(new Dimension(100,50));
+        shield1B.setPreferredSize(new Dimension(100, 50));
         sh1Handler = new Shield1ButtonHandler();
         shield1B.addActionListener(sh1Handler);
-        
+
         shield2B = new JButton("Shield 2");
-        shield2B.setPreferredSize(new Dimension(100,50));
+        shield2B.setPreferredSize(new Dimension(100, 50));
         sh2Handler = new Shield2ButtonHandler();
         shield2B.addActionListener(sh2Handler);
-        
+
         shield3B = new JButton("Shield 3");
-        shield3B.setPreferredSize(new Dimension(100,50));
+        shield3B.setPreferredSize(new Dimension(100, 50));
         sh3Handler = new Shield3ButtonHandler();
         shield3B.addActionListener(sh3Handler);
-        
+
         shield4B = new JButton("Shield 4");
-        shield4B.setPreferredSize(new Dimension(100,50));
+        shield4B.setPreferredSize(new Dimension(100, 50));
         sh4Handler = new Shield4ButtonHandler();
         shield4B.addActionListener(sh4Handler);
-        
+
         shield5B = new JButton("Shield 5");
-        shield5B.setPreferredSize(new Dimension(100,50));
+        shield5B.setPreferredSize(new Dimension(100, 50));
         sh5Handler = new Shield5ButtonHandler();
         shield5B.addActionListener(sh5Handler);
-        
+
         sword1B = new JButton("Sword 1");
-        sword1B.setPreferredSize(new Dimension(100,50));
+        sword1B.setPreferredSize(new Dimension(100, 50));
         sw1Handler = new Sword1ButtonHandler();
         sword1B.addActionListener(sw1Handler);
-        
+
         sword2B = new JButton("Sword 2");
-        sword2B.setPreferredSize(new Dimension(100,50));
+        sword2B.setPreferredSize(new Dimension(100, 50));
         sw2Handler = new Sword2ButtonHandler();
         sword2B.addActionListener(sw2Handler);
-        
+
         sword3B = new JButton("Sword 3");
-        sword3B.setPreferredSize(new Dimension(100,50));
+        sword3B.setPreferredSize(new Dimension(100, 50));
         sw3Handler = new Sword3ButtonHandler();
         sword3B.addActionListener(sw3Handler);
-        
+
         sword4B = new JButton("Sword 4");
-        sword4B.setPreferredSize(new Dimension(100,50));
+        sword4B.setPreferredSize(new Dimension(100, 50));
         sw4Handler = new Sword4ButtonHandler();
         sword4B.addActionListener(sw4Handler);
-        
+
         sword5B = new JButton("Sword 5");
-        sword5B.setPreferredSize(new Dimension(100,50));
+        sword5B.setPreferredSize(new Dimension(100, 50));
         sw5Handler = new Sword5ButtonHandler();
         sword5B.addActionListener(sw5Handler);
-        
-        salesScroll.setPreferredSize(new Dimension(200,250));
-        
+
+        salesScroll.setPreferredSize(new Dimension(200, 250));
+
         setTitle("Refund Menu");
         SpringLayout layout = new SpringLayout();
         Container pane = getContentPane();
         pane.setLayout(layout);
-        
+
         pane.add(salesScroll);
         layout.putConstraint(SpringLayout.WEST, salesScroll, 525, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, salesScroll, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(totalGoldL);
         layout.putConstraint(SpringLayout.WEST, totalGoldL, 525, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, totalGoldL, 265, SpringLayout.NORTH, pane);
-        
+
         pane.add(totalSaleL);
         layout.putConstraint(SpringLayout.WEST, totalSaleL, 680, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, totalSaleL, 265, SpringLayout.NORTH, pane);
-                
+
         pane.add(helm1B);
         layout.putConstraint(SpringLayout.WEST, helm1B, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, helm1B, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(helm2B);
         layout.putConstraint(SpringLayout.WEST, helm2B, 105, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, helm2B, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(helm3B);
         layout.putConstraint(SpringLayout.WEST, helm3B, 205, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, helm3B, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(helm4B);
         layout.putConstraint(SpringLayout.WEST, helm4B, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, helm4B, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(helm5B);
         layout.putConstraint(SpringLayout.WEST, helm5B, 405, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, helm5B, 5, SpringLayout.NORTH, pane);
-        
+
         pane.add(body1B);
         layout.putConstraint(SpringLayout.WEST, body1B, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, body1B, 60, SpringLayout.NORTH, pane);
-        
+
         pane.add(body2B);
         layout.putConstraint(SpringLayout.WEST, body2B, 105, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, body2B, 60, SpringLayout.NORTH, pane);
-        
+
         pane.add(body3B);
         layout.putConstraint(SpringLayout.WEST, body3B, 205, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, body3B, 60, SpringLayout.NORTH, pane);
-        
+
         pane.add(body4B);
         layout.putConstraint(SpringLayout.WEST, body4B, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, body4B, 60, SpringLayout.NORTH, pane);
-        
+
         pane.add(body5B);
         layout.putConstraint(SpringLayout.WEST, body5B, 405, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, body5B, 60, SpringLayout.NORTH, pane);
-        
+
         pane.add(legs1B);
         layout.putConstraint(SpringLayout.WEST, legs1B, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, legs1B, 115, SpringLayout.NORTH, pane);
-        
+
         pane.add(legs2B);
         layout.putConstraint(SpringLayout.WEST, legs2B, 105, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, legs2B, 115, SpringLayout.NORTH, pane);
-        
+
         pane.add(legs3B);
         layout.putConstraint(SpringLayout.WEST, legs3B, 205, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, legs3B, 115, SpringLayout.NORTH, pane);
-        
+
         pane.add(legs4B);
         layout.putConstraint(SpringLayout.WEST, legs4B, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, legs4B, 115, SpringLayout.NORTH, pane);
-        
+
         pane.add(legs5B);
         layout.putConstraint(SpringLayout.WEST, legs5B, 405, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, legs5B, 115, SpringLayout.NORTH, pane);
-        
+
         pane.add(shield1B);
         layout.putConstraint(SpringLayout.WEST, shield1B, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, shield1B, 170, SpringLayout.NORTH, pane);
-        
+
         pane.add(shield2B);
         layout.putConstraint(SpringLayout.WEST, shield2B, 105, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, shield2B, 170, SpringLayout.NORTH, pane);
-        
+
         pane.add(shield3B);
         layout.putConstraint(SpringLayout.WEST, shield3B, 205, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, shield3B, 170, SpringLayout.NORTH, pane);
-        
+
         pane.add(shield4B);
         layout.putConstraint(SpringLayout.WEST, shield4B, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, shield4B, 170, SpringLayout.NORTH, pane);
-        
+
         pane.add(shield5B);
         layout.putConstraint(SpringLayout.WEST, shield5B, 405, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, shield5B, 170, SpringLayout.NORTH, pane);
-        
+
         pane.add(sword1B);
         layout.putConstraint(SpringLayout.WEST, sword1B, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, sword1B, 225, SpringLayout.NORTH, pane);
-        
+
         pane.add(sword2B);
         layout.putConstraint(SpringLayout.WEST, sword2B, 105, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, sword2B, 225, SpringLayout.NORTH, pane);
-        
+
         pane.add(sword3B);
         layout.putConstraint(SpringLayout.WEST, sword3B, 205, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, sword3B, 225, SpringLayout.NORTH, pane);
-        
+
         pane.add(sword4B);
         layout.putConstraint(SpringLayout.WEST, sword4B, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, sword4B, 225, SpringLayout.NORTH, pane);
-        
+
         pane.add(sword5B);
         layout.putConstraint(SpringLayout.WEST, sword5B, 405, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, sword5B, 225, SpringLayout.NORTH, pane);
-        
+
         pane.add(refund);
         layout.putConstraint(SpringLayout.WEST, refund, 5, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, refund, 280, SpringLayout.NORTH, pane);
-        
+
         pane.add(reset);
         layout.putConstraint(SpringLayout.WEST, reset, 305, SpringLayout.WEST, pane);
         layout.putConstraint(SpringLayout.NORTH, reset, 280, SpringLayout.NORTH, pane);
-        
+
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
         setVisible(true);
-        
+
         //PREVIOUS CODE, TESTING NEW LAYOUT ABOVE
         /*
         super("Refunds:");
@@ -396,322 +394,480 @@ public class Refunds extends JFrame implements Observer {
                 setVisible(false);
             }
         });
-        */
-
+         */
     }
-    
-    public class RefundButtonHandler implements ActionListener{
+
+    public class RefundButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             //System.out.println(totalSales);
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            totalSaleL.setText(Integer.toString(totalSales) + "gp");
         }
-        
+
     }
-    
-    public class ResetButtonHandler implements ActionListener{
+
+    public class ResetButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             list.clear();
             totalSales = 0;
             Inventory.clickh1 = 0;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            totalSaleL.setText(Integer.toString(totalSales) + "gp");
         }
-        
+
     }
-    
-    public class Helm1ButtonHandler implements ActionListener{
+
+    public class Helm1ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             Inventory.clickh1++;
-            if((Inventory.clickh1 + Inventory.qh1) > 10  ){
+            if ((Inventory.clickh1 + Inventory.qh1) > 10) {
                 JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
                 JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
-                
-            }else{
+
+            } else {
                 list.addElement("Helm   1   -150 gp");
                 totalSales -= 150;
-                totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
             }
-            
-            
-            
+
         }
-        
+
     }
-    
-    public class Helm2ButtonHandler implements ActionListener{
+
+    public class Helm2ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-             Inventory.clickh1++;
-             if((Inventory.clickh2 + Inventory.qh2) > 10  ){
+            Inventory.clickh2++;
+            if ((Inventory.clickh2 + Inventory.qh2) > 10) {
                 JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
                 JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
-                
-            }else{
-                list.addElement("Helm   1   -150 gp");
+
+            } else {
+                list.addElement("Helm   2   -400 gp");
+                totalSales -= 400;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+        }
+
+    }
+
+    public class Helm3ButtonHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Inventory.clickh3++;
+            if ((Inventory.clickh3 + Inventory.qh3) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Helm   3   -900 gp");
+                totalSales -= 900;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+        }
+
+    }
+
+    public class Helm4ButtonHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Inventory.clickh4++;
+            if ((Inventory.clickh4 + Inventory.qh4) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Helm   4   -1900 gp");
+                totalSales -= 1900;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+        }
+
+    }
+
+    public class Helm5ButtonHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Inventory.clickh5++;
+            if ((Inventory.clickh5 + Inventory.qh5) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Helm   5   -3900 gp");
                 totalSales -= 150;
-                totalSaleL.setText(Integer.toString(totalSales)+ "gp");
-            }       
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Helm3ButtonHandler implements ActionListener{
+
+    public class Body1ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Helm   3   -900 gp");
-            totalSales -= 900;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickb1++;
+            if ((Inventory.clickb1 + Inventory.qb1) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Body   1   -400 gp");
+                totalSales -= 400;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Helm4ButtonHandler implements ActionListener{
+
+    public class Body2ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Helm   4   -1900 gp");
-            totalSales -= 1900;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickb2++;
+            if ((Inventory.clickb2 + Inventory.qb2) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Body   2   -1000 gp");
+                totalSales -= 1000;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+
         }
-        
     }
-    
-    public class Helm5ButtonHandler implements ActionListener{
+
+    public class Body3ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Helm   5   -3900 gp");
-            totalSales -= 3900;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickb3++;
+            if ((Inventory.clickb3 + Inventory.qb3) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Body   3   -2200 gp");
+                totalSales -= 2200;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+
         }
-        
     }
-    
-    public class Body1ButtonHandler implements ActionListener{
+
+    public class Body4ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Body   1   -400 gp");
-            totalSales -= 400;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickb4++;
+            if ((Inventory.clickb4 + Inventory.qb4) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Body   4   -4600 gp");
+                totalSales -= 4600;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+
         }
-        
     }
-    
-    public class Body2ButtonHandler implements ActionListener{
+
+    public class Body5ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Body   2   -1000 gp");
-            totalSales -= 1000;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickb5++;
+            if ((Inventory.clickb5 + Inventory.qb5) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Body   5   -9400 gp");
+                totalSales -= 9400;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
+
         }
-        
     }
-    
-    public class Body3ButtonHandler implements ActionListener{
+
+    public class Legs1ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Body   3   -2200 gp");
-            totalSales -= 2200;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickl1++;
+            if ((Inventory.clickl1 + Inventory.ql1) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Legs   1   -300 gp");
+                totalSales -= 300;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Body4ButtonHandler implements ActionListener{
+
+    public class Legs2ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Body   4   -4600 gp");
-            totalSales -= 4600;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickl2++;
+            if ((Inventory.clickl2 + Inventory.ql2) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Legs   2   -700 gp");
+                totalSales -= 700;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Body5ButtonHandler implements ActionListener{
+
+    public class Legs3ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Body   5   -9400 gp");
-            totalSales -= 9400;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickl3++;
+            if ((Inventory.clickl3 + Inventory.ql3) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Legs   3   -1500 gp");
+                totalSales -= 1500;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Legs1ButtonHandler implements ActionListener{
+
+    public class Legs4ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Legs   1   -300 gp");
-            totalSales -= 300;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickh1++;
+            Inventory.clickl1++;
+            if ((Inventory.clickl1 + Inventory.ql1) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Legs   4   -3100 gp");
+                totalSales -= 3100;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Legs2ButtonHandler implements ActionListener{
+
+    public class Legs5ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Legs   2   -700 gp");
-            totalSales -= 700;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickl5++;
+            if ((Inventory.clickl5 + Inventory.ql5) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Legs   5   -6200 gp");
+                totalSales -= 6200;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Legs3ButtonHandler implements ActionListener{
+
+    public class Shield1ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Legs   3   -1500 gp");
-            totalSales -= 1500;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksh1++;
+            if ((Inventory.clicksh1 + Inventory.qsh1) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Shield   1   -200 gp");
+                totalSales -= 200;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Legs4ButtonHandler implements ActionListener{
+
+    public class Shield2ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Legs   4   -3100 gp");
-            totalSales -= 3100;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksh1++;
+            if ((Inventory.clicksh2 + Inventory.qsh2) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Shield   2   -400 gp");
+                totalSales -= 400;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Legs5ButtonHandler implements ActionListener{
+
+    public class Shield3ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Legs   5   -6200 gp");
-            totalSales -= 6200;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clickh3++;
+            if ((Inventory.clickh3 + Inventory.qh3) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Shield   3   -600 gp");
+                totalSales -= 600;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Shield1ButtonHandler implements ActionListener{
+
+    public class Shield4ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Shield 1   -200 gp");
-            totalSales -= 300;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksh4++;
+            if ((Inventory.clicksh4 + Inventory.qsh4) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Shield   4   -1200 gp");
+                totalSales -= 1200;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Shield2ButtonHandler implements ActionListener{
+
+    public class Shield5ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Shield 2   -400 gp");
-            totalSales -= 400;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksh5++;
+            if ((Inventory.clicksh5 + Inventory.qsh5) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Shield   5   -2400 gp");
+                totalSales -= 2400;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Shield3ButtonHandler implements ActionListener{
+
+    public class Sword1ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Shield 3   -600 gp");
-            totalSales -= 600;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksw1++;
+            if ((Inventory.clicksw1 + Inventory.qsw1) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Sword   1   -250 gp");
+                totalSales -= 250;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Shield4ButtonHandler implements ActionListener{
+
+    public class Sword2ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Shield 4   -1200 gp");
-            totalSales -= 1200;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksw2++;
+            if ((Inventory.clicksw2 + Inventory.qsw2) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Sword   2   -500 gp");
+                totalSales -= 500;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Shield5ButtonHandler implements ActionListener{
+
+    public class Sword3ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Shield 5   -2400 gp");
-            totalSales -= 2400;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksw3++;
+            if ((Inventory.clicksw3 + Inventory.qsw3) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Sword   1   -1000 gp");
+                totalSales -= 1000;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
     }
-    
-    public class Sword1ButtonHandler implements ActionListener{
+
+    public class Sword4ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Sword  1   -250 gp");
-            totalSales -= 250;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            Inventory.clicksw4++;
+            if ((Inventory.clicksw4 + Inventory.qsw4) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
+
+            } else {
+                list.addElement("Sword   4   -2000 gp");
+                totalSales -= 2000;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
+
     }
-    
-    public class Sword2ButtonHandler implements ActionListener{
+
+    public class Sword5ButtonHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            list.addElement("Sword  2   -500 gp");
-            totalSales -= 500;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
-        }
-        
-    }
-    
-    public class Sword3ButtonHandler implements ActionListener{
+            Inventory.clicksw5++;
+            if ((Inventory.clicksw5 + Inventory.qsw5) > 10) {
+                JOptionPane.showMessageDialog(null, "Sorry, we do not have that many items in stock. Please reset the cart", "You have selected too many items", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, "For information on how many items we have in stock, please refer to our inventory screen.", "Info", JOptionPane.PLAIN_MESSAGE);
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            list.addElement("Sword  3   -1000 gp");
-            totalSales -= 1000;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
+            } else {
+                list.addElement("Sword   5   -4000 gp");
+                totalSales -= 4000;
+                totalSaleL.setText(Integer.toString(totalSales) + "gp");
+            }
         }
-        
-    }
-    
-    public class Sword4ButtonHandler implements ActionListener{
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            list.addElement("Sword  4   -2000 gp");
-            totalSales -= 2000;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
-        }
-        
-    }
-    
-    public class Sword5ButtonHandler implements ActionListener{
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            list.addElement("Sword  5   -4000 gp");
-            totalSales -= 4000;
-            totalSaleL.setText(Integer.toString(totalSales)+ "gp");
-        }
-        
     }
 
     @Override
