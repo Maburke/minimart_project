@@ -29,35 +29,67 @@ public class Inventory extends JFrame implements Observer {
 
     private JTable table;
     //q = quantity  h = helmet
-    private int qh1 = 10;
-    private int qh2 = 10;
-    private int qh3 = 10;
-    private int qh4 = 10;
-    private int qh5 = 10;
+    public static int qh1 = 10;
+    public static int qh2 = 10;
+    public static int qh3 = 10;
+    public static int qh4 = 10;
+    public static int qh5 = 10;
     //q = quantity  b = body
-    private int qb1 = 10;
-    private int qb2 = 10;
-    private int qb3 = 10;
-    private int qb4 = 10;
-    private int qb5 = 10;
+    public static int qb1 = 10;
+    public static int qb2 = 10;
+    public static int qb3 = 10;
+    public static int qb4 = 10;
+    public static int qb5 = 10;
     //q = quantity  l = legs
-    private int ql1 = 10;
-    private int ql2 = 10;
-    private int ql3 = 10;
-    private int ql4 = 10;
-    private int ql5 = 10;
+    public static int ql1 = 10;
+    public static int ql2 = 10;
+    public static int ql3 = 10;
+    public static int ql4 = 10;
+    public static int ql5 = 10;
     //q = quantity  sh = shield
-    private int qsh1 = 10;
-    private int qsh2 = 10;
-    private int qsh3 = 10;
-    private int qsh4 = 10;
-    private int qsh5 = 10;
+    public static int qsh1 = 10;
+    public static int qsh2 = 10;
+    public static int qsh3 = 10;
+    public static int qsh4 = 10;
+    public static int qsh5 = 10;
     //q = quantity  sw = sword
-    private int qsw1 = 10;
-    private int qsw2 = 10;
-    private int qsw3 = 10;
-    private int qsw4 = 10;
-    private int qsw5 = 10;
+    public static int qsw1 = 10;
+    public static int qsw2 = 10;
+    public static int qsw3 = 10;
+    public static int qsw4 = 10;
+    public static int qsw5 = 10;
+    
+    public static int clickh1 = 0;
+    public static int clickh2 = 0;
+    public static int clickh3 = 0;
+    public static int clickh4 = 0;
+    public static int clickh5 = 0;
+    
+    public static int clickb1 = 0;
+    public static int clickb2 = 0;
+    public static int clickb3 = 0;
+    public static int clickb4 = 0;
+    public static int clickb5 = 0;
+    
+    public static int clickl1 = 0;
+    public static int clickl2 = 0;
+    public static int clickl3 = 0;
+    public static int clickl4 = 0;
+    public static int clickl5 = 0;
+    
+    public static int clicksh1 = 0;
+    public static int clicksh2 = 0;
+    public static int clicksh3 = 0;
+    public static int clicksh4 = 0;
+    public static int clicksh5 = 0;
+    
+    public static int clicksw1 = 0;
+    public static int clicksw2 = 0;
+    public static int clicksw3 = 0;
+    public static int clicksw4 = 0;
+    public static int clicksw5 = 0;
+            
+
 
     public Inventory() {
 
@@ -100,10 +132,6 @@ public class Inventory extends JFrame implements Observer {
                 return getValueAt(0, column).getClass();
             }
 
-            public boolean isCellEditable(int row, int column) {
-                int modelcolumn = table.convertColumnIndexToModel(column);
-                return (modelcolumn == 3) ? false : true;
-            }
         };
 
         table = new JTable(model);
